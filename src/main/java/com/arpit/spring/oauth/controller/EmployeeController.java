@@ -49,8 +49,8 @@ public class EmployeeController {
                 HttpStatus.OK);
     }
 
-    @GetMapping(value = "/list/{employeeId:.+}")
-    public ResponseEntity<List<Employee>> get(@PathVariable String employeeId) {
+    @GetMapping(value = "/list/{employeeId}")
+    public ResponseEntity<List<Employee>> get(@PathVariable Long employeeId) {
         List<Employee> filteredEvents = employeeService.getEmployee(employeeId);
         if (CollectionUtils.isNotEmpty(filteredEvents)) {
             return new ResponseEntity<>(filteredEvents,

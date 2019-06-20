@@ -63,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeService {
      * @return
      */
     @Override
-    public List<Employee> getEmployee(final String employeeId) {
+    public List<Employee> getEmployee(final Long employeeId) {
         final List<Employee> events = employeeRepository.findAll();
         return events.stream().filter(e -> e.getId().equals(employeeId)).collect(Collectors.toList());
     }

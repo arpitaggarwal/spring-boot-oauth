@@ -12,6 +12,6 @@ public interface EmployeeService {
 
     List<Employee> getEmployees();
 
-    List<Employee> getEmployee(final String employeeId);
+    List<Employee> getEmployee(final Long employeeId);
 
 }
