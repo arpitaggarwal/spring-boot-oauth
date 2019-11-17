@@ -5,11 +5,15 @@ import java.io.Serializable;
 
 @Entity(name = "employee")
 public class Employee implements Serializable {
+
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue
     private Long id;
+
     private String name;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;

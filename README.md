@@ -1,22 +1,19 @@
-Save Employee:
+# REST API
+
+## Save Employee:
 
 ```
-{
-	"name": "Arpit",
-	"address": {
-		"city": "Delhi",
-		"zipCode": "10098"
-	}
-}
+$ curl -H "Content-Type: application/json" -X POST -d '{"name": "Arpit","address": {"city": "Delhi","zipCode": "10098"}}' http://localhost:8000/employee/save
 ```
 
-List All
+## List All
 
 ```
-http://localhost:8000/employee/list/
+$ curl -X GET http://localhost:8000/employee/list/
 ```
 
-List One
+
+## List One
 ```
-http://localhost:8000/employee/list/1
+$ curl -X GET http://localhost:8000/employee/list/1
 ```

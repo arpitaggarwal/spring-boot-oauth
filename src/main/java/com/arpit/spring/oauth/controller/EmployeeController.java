@@ -21,16 +21,13 @@ public class EmployeeController {
 
     @PostMapping(value = "/save")
     public ResponseEntity save(@RequestBody Employee employee) {
-
         final String status = employeeService.save(employee);
-
         if (StringUtils.isNotBlank(status) && ApplicationConstants.DUPLICATE.equals(status)) {
             return new ResponseEntity<>(
                     HttpStatus.BAD_REQUEST);
         } else if (StringUtils.isNotBlank(status) && ApplicationConstants.CREATED.equals(status)) {
             return new ResponseEntity<>(
                     HttpStatus.CREATED);
-
         }
         return null;
     }
@@ -59,7 +56,6 @@ public class EmployeeController {
             return new ResponseEntity<>(
                     HttpStatus.NOT_FOUND);
         }
-
     }
 
 }
