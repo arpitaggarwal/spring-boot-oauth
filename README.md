@@ -17,3 +17,11 @@ $ curl -X GET http://localhost:8000/employee/list/
 ```
 $ curl -X GET http://localhost:8000/employee/list/1
 ```
+
+# Deploying to Heroku
+
+```
+$ heroku create
+$ git push heroku master
+$ heroku open
+```
