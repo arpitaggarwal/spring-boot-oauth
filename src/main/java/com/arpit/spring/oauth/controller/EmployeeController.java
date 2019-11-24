@@ -26,7 +26,7 @@ public class EmployeeController {
             return new ResponseEntity<>(
                     HttpStatus.BAD_REQUEST);
         } else if (StringUtils.isNotBlank(status) && ApplicationConstants.CREATED.equals(status)) {
-            return new ResponseEntity<>(
+            return new ResponseEntity<>("Employee Saved",
                     HttpStatus.CREATED);
         }
         return null;
