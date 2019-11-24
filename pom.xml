@@ -6,8 +6,9 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.9.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
+
 	<groupId>com.arpit</groupId>
 	<artifactId>spring-boot-oauth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>

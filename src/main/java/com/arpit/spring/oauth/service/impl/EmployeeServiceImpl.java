@@ -4,6 +4,7 @@ import com.arpit.spring.oauth.constants.ApplicationConstants;
 import com.arpit.spring.oauth.model.Employee;
 import com.arpit.spring.oauth.repository.EmployeeRepository;
 import com.arpit.spring.oauth.service.EmployeeService;
+import com.arpit.spring.oauth.util.ApplicationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -46,7 +47,8 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     @Override
     public List<Employee> getEmployees() {
-        return employeeRepository.findAll();
+       // return employeeRepository.findAll();
+        return ApplicationUtil.getEmployees();
     }
 
     /**
