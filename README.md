@@ -25,3 +25,27 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
+
+# Receive Side
+
+## URL - http://localhost:8000/visa/receive/oct
+
+## Request
+
+```
+{
+	"encRecipientPAN":"1234567890"
+
+}
+```
+
+## Response
+
+```
+{
+    "responseCode": "00",
+    "receiverTransactionId": "00",
+    "authIdResponse": "00",
+    "cpsAuthorizationCharacteristicsIndicator": "00"
+}
+```
